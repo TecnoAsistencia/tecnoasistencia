@@ -111,12 +111,30 @@ footer a:hover {
 
 /* Media Query para móviles */
 @media (max-width: 768px) {
-  body {
-    min-width: 1024px;
-    overflow-x: auto;
+  .hero {
+    padding: 2rem 1rem;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero a.btn {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
   }
 }
-
 @media (max-width: 768px) {
   body {
     min-width: 1024px;
