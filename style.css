@@ -195,78 +195,57 @@ footer a:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 0.5rem;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  nav a {
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-    border: none;
-  }
-
   .hero {
-    height: auto;
-    background-position: center;
-    background-size: cover;
+    height: auto; /* que se adapte al contenido */
     padding: 2rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* vertical */
+    justify-content: center;
     align-items: center;
     text-align: center;
+    background-position: center;
+    background-size: cover;
   }
 
   .hero h1 {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    max-width: 90%;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #e0f7ff;
+    color: #caf0f8;
+    max-width: 90%;
+  }
+
+  /* Contenedor para botones */
+  .hero .btn-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
   }
 
   .hero a.btn {
     font-size: 1rem;
-    padding: 0.8rem 1.2rem;
-    width: 90%;
-    max-width: 300px;
-    margin-bottom: 1rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    flex: 1 1 140px; /* para que se acomoden bien */
     text-align: center;
-    padding: 1rem;
+    border-radius: 6px;
+    background: #0077b6;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0077b6;
+    transition: background 0.3s ease;
   }
 
-  footer p {
-    margin-bottom: 0.5rem;
-  }
-
-  footer a {
-    display: inline-block;
-    margin: 0 0.3rem;
+  .hero a.btn:hover {
+    background: #0096c7;
+    box-shadow: 0 0 15px #0096c7;
   }
 }
 
