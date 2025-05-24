@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contacto - TecnoAsistencia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #eee;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  nav {
+    background: #000814;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  nav a {
+    color: #90caf9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    background-color: #001f4d;
+    box-shadow: 0 0 8px #0055aa;
+    outline: none;
+  }
+  h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #003366;
+    text-shadow:
+      0 0 6px #001f4d,
+      0 0 12px #003366,
+      0 0 18px #0055aa;
+    margin-bottom: 1rem;
+  }
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 8px #003366;
+  }
+  label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+    font-weight: 600;
+    color: #90caf9;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    margin-top: 1rem;
+    background-color: #0055aa;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover, button:focus {
+    background-color: #003366;
+    outline: none;
+  }
+</style>
+<script>
+  function enviarContacto(e) {
+    e.preventDefault();
+    alert('Gracias por contactarnos. Te responderemos pronto.');
+    document.getElementById('formContacto').reset();
+  }
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Bienvenida</a>
+  <a href="servicios.html">Servicios Técnicos</a>
+  <a href="ventas.html">Ventas Informáticas</a>
+  <a href="faq.html">Preguntas Frecuentes</a>
+  <a href="testimonios.html">Testimonios</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<h1>Contacto</h1>
+<h2>Escríbenos para cualquier consulta</h2>
+
+<form id="formContacto" onsubmit="enviarContacto(event)">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+
+  <label for="email">Correo Electrónico:</label>
+  <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
+
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí"></textarea>
+
+  <button type="submit">Enviar Mensaje</button>
+</form>
+
+</body>
+</html>
