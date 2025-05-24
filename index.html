@@ -1,151 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <title>TecnoAsistencia - Servicios y Ventas Electrónicas</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+<title>Bienvenida - TecnoAsistencia</title>
+<style>
+  /* Estilos para el hero banner en portada */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4rem;
+    color: #00b4d8;
+    text-shadow: 0 0 10px #002244;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #caf0f8;
+  }
+
+  .hero a.btn {
+    padding: 1rem 2rem;
+    background: #0077b6;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0077b6;
+    transition: background 0.3s ease;
+  }
+
+  .hero a.btn:hover {
+    background: #0096c7;
+    box-shadow: 0 0 15px #0096c7;
+  }
+</style>
 </head>
 <body>
 
 <header>
   <h1>TecnoAsistencia</h1>
-  <p>Servicios Técnicos y Ventas Electrónicas para tu tecnología</p>
+  <nav>
+    <a href="index.html">Bienvenida</a>
+    <a href="servicios.html">Servicios Técnicos</a>
+    <a href="ventas.html">Ventas Informáticas</a>
+    <a href="faq.html">Preguntas Frecuentes</a>
+    <a href="testimonios.html">Testimonios</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#bienvenida">Bienvenida</a>
-  <a href="#servicios">Servicios Técnicos</a>
-  <a href="#productos">Ver Productos</a>
-  <a href="#ventas">Ventas Informáticas</a>
-  <a href="#contacto">Contacto</a>
-  <a href="#faq">Preguntas Frecuentes</a>
-  <a href="#testimonios">Testimonios</a>
-</nav>
-
-<section id="bienvenida">
-  <h2>Bienvenida</h2>
-  <p>En TecnoAsistencia, te ofrecemos soluciones integrales para tus dispositivos electrónicos, desde reparaciones hasta la venta de productos tecnológicos de alta calidad.</p>
-</section>
-
-<section id="servicios">
-  <h2>Servicios Técnicos</h2>
-  <ul>
-    <li>Reparación de computadoras y laptops</li>
-    <li>Soporte técnico remoto y presencial</li>
-    <li>Instalación y actualización de software</li>
-    <li>Mantenimiento preventivo y limpieza de hardware</li>
-    <li>Optimización de sistemas operativos</li>
-    <li>Recuperación de datos</li>
-    <li>Diagnóstico de hardware</li>
-    <li>Configuración de redes</li>
-    <li>Asesoría tecnológica personalizada</li>
-    <li>Formateo e instalación de antivirus</li>
-  </ul>
-</section>
-
-<section id="productos">
-  <h2>Productos</h2>
-  <p>Descubre nuestra variedad de productos para PC y notebook, ideales para mejorar tu experiencia tecnológica.</p>
-  <ul>
-    <li>Memorias RAM DDR4 8GB - Precio aprox. $45 USD</li>
-    <li>Disco SSD 512GB - Precio aprox. $60 USD</li>
-    <li>Teclado mecánico RGB - Precio aprox. $70 USD</li>
-    <li>Mouse inalámbrico ergonómico - Precio aprox. $25 USD</li>
-    <li>Monitor Full HD 24" - Precio aprox. $150 USD</li>
-    <li>Tarjeta gráfica NVIDIA GTX 1660 - Precio aprox. $250 USD</li>
-    <li>Procesador Intel i5 10ª Gen - Precio aprox. $200 USD</li>
-    <li>Fuente de poder 650W - Precio aprox. $80 USD</li>
-    <li>Gabinete gaming con RGB - Precio aprox. $90 USD</li>
-    <li>Audífonos gaming con micrófono - Precio aprox. $40 USD</li>
-  </ul>
-</section>
-
-<section id="ventas">
-  <h2>Ventas Informáticas</h2>
-  <article>
-    <h3>Computadora de Escritorio X500</h3>
-    <p>Procesador Intel i7, 16GB RAM, SSD 512GB, tarjeta gráfica NVIDIA GTX 1660.</p>
-    <p><strong>Precio:</strong> $900 USD</p>
-  </article>
-  <article>
-    <h3>Laptop Ultrabook Z3</h3>
-    <p>Procesador AMD Ryzen 7, 16GB RAM, SSD 1TB, pantalla Full HD.</p>
-    <p><strong>Precio:</strong> $1200 USD</p>
-  </article>
-  <article>
-    <h3>Periféricos y Accesorios</h3>
-    <p>Teclados mecánicos, mouse ergonómicos, monitores, y más.</p>
-    <p><strong>Consulta precios y disponibilidad</strong></p>
-  </article>
-  <p>Para comprar, escríbenos en la sección de contacto o visita nuestra tienda física.</p>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>Teléfono: +595 123 456 789</p>
-  <p>Email: contacto@tecnoasistencia.com.py</p>
-  <p>Dirección: Av. Principal 123, Asunción, Paraguay</p>
-
-  <form>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required />
-
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required />
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <h3>¿Cuánto tiempo tarda una reparación?</h3>
-  <p>Dependiendo del problema, generalmente entre 24 y 72 horas.</p>
-  <h3>¿Ofrecen garantía en los servicios?</h3>
-  <p>Sí, todos nuestros servicios cuentan con garantía de 3 meses.</p>
-  <h3>¿Atienden equipos fuera de garantía?</h3>
-  <p>Sí, ofrecemos servicios para equipos fuera y dentro de garantía.</p>
-  <h3>¿Cuál es el horario de atención?</h3>
-  <p>Lunes a viernes de 8:00 a 18:00, sábados de 9:00 a 13:00.</p>
-  <h3>¿Realizan soporte remoto?</h3>
-  <p>Sí, contamos con soporte remoto para muchos problemas.</p>
-  <h3>¿Aceptan pagos con tarjeta?</h3>
-  <p>Sí, aceptamos tarjetas de crédito y débito.</p>
-  <h3>¿Tienen tienda física?</h3>
-  <p>Sí, en Av. Principal 123, Asunción.</p>
-  <h3>¿Puedo solicitar presupuesto sin compromiso?</h3>
-  <p>Claro, ofrecemos cotizaciones gratuitas.</p>
-  <h3>¿Realizan instalación de software?</h3>
-  <p>Sí, instalación y actualización de todo tipo de software.</p>
-  <h3>¿Hacen mantenimiento preventivo?</h3>
-  <p>Sí, para asegurar el buen funcionamiento de tus equipos.</p>
-</section>
-
-<section id="testimonios">
-  <h2>Testimonios</h2>
-  <blockquote>
-    <p>"Excelente servicio, rápido y confiable. Recomiendo 100%." - Juan P.</p>
-  </blockquote>
-  <blockquote>
-    <p>"Compré una laptop y el soporte postventa fue impecable." - María G.</p>
-  </blockquote>
-
-  <h3>Deja tu testimonio</h3>
-  <form id="form-testimonio">
-    <label for="nombre-testimonio">Nombre:</label>
-    <input type="text" id="nombre-testimonio" name="nombre-testimonio" required />
-
-    <label for="mensaje-testimonio">Mensaje:</label>
-    <textarea id="mensaje-testimonio" name="mensaje-testimonio" rows="3" required></textarea>
-
-    <button type="submit">Enviar Testimonio</button>
-  </form>
-
-  <div id="mensajes-testimonios"></div>
+<section class="hero">
+  <h1>Soluciones Integrales para tu Tecnología</h1>
+  <p>Reparaciones, soporte técnico y venta de productos electrónicos con calidad y confianza.</p>
+  <a href="servicios.html" class="btn">Ver Servicios</a>
 </section>
 
 <footer>
@@ -155,25 +78,6 @@
     <a href="https://www.instagram.com/davidverdun7/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram</a>
   </p>
 </footer>
-
-<script>
-  // Manejar envío de formulario de testimonio sin recargar la página
-  document.getElementById('form-testimonio').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nombre = document.getElementById('nombre-testimonio').value.trim();
-    const mensaje = document.getElementById('mensaje-testimonio').value.trim();
-    if(nombre && mensaje){
-      const contenedor = document.getElementById('mensajes-testimonios');
-      const nuevoTestimonio = document.createElement('blockquote');
-      nuevoTestimonio.innerHTML = `<p>"${mensaje}" - ${nombre}</p>`;
-      contenedor.appendChild(nuevoTestimonio);
-      this.reset();
-      alert('Gracias por tu testimonio!');
-    } else {
-      alert('Por favor completa todos los campos.');
-    }
-  });
-</script>
 
 </body>
 </html>
