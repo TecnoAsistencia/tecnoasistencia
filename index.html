@@ -4,21 +4,80 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="style.css" />
-<title>TecnoAsistencia - Bienvenida</title>
+<title>Bienvenida - TecnoAsistencia</title>
+<style>
+  /* Estilos para el hero banner en portada */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4rem;
+    color: #00b4d8;
+    text-shadow: 0 0 10px #002244;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #caf0f8;
+  }
+
+  .hero a.btn {
+    padding: 1rem 2rem;
+    background: #0077b6;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0077b6;
+    transition: background 0.3s ease;
+  }
+
+  .hero a.btn:hover {
+    background: #0096c7;
+    box-shadow: 0 0 15px #0096c7;
+  }
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Bienvenida</a>
-  <a href="servicios.html">Servicios Técnicos</a>
-  <a href="ventas.html">Ventas Informáticas</a>
-  <a href="faq.html">Preguntas Frecuentes</a>
-  <a href="testimonios.html">Testimonios</a>
-  <a href="contacto.html">Contacto</a>
-</nav>
+<header>
+  <h1>TecnoAsistencia</h1>
+  <nav>
+    <a href="index.html">Bienvenida</a>
+    <a href="servicios.html">Servicios Técnicos</a>
+    <a href="ventas.html">Ventas Informáticas</a>
+    <a href="faq.html">Preguntas Frecuentes</a>
+    <a href="testimonios.html">Testimonios</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
 
-<h1>Bienvenidos a TecnoAsistencia</h1>
-<p>Tu centro de soporte y ventas informáticas confiable, con servicio técnico especializado para PC y notebooks, una amplia variedad de productos y atención personalizada. Explora nuestras secciones para conocer todo lo que podemos ofrecerte.</p>
+<section class="hero">
+  <h1>Soluciones Integrales para tu Tecnología</h1>
+  <p>Reparaciones, soporte técnico y venta de productos electrónicos con calidad y confianza.</p>
+  <a href="servicios.html" class="btn">Ver Servicios</a>
+</section>
+
+<footer>
+  <p>© 2025 TecnoAsistencia | contacto@tecnoasistencia.com.py | +595 123 456 789</p>
+  <p>
+    <a href="https://www.facebook.com/Davidverdun777" target="_blank" rel="noopener noreferrer">Facebook</a> |
+    <a href="https://www.instagram.com/davidverdun7/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </p>
+</footer>
 
 </body>
 </html>
