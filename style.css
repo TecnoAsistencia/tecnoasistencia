@@ -134,3 +134,9 @@ footer a:hover {
     margin: 0.5rem;
   }
 }
+@media (max-width: 768px) {
+  body {
+    min-width: 1024px;
+    overflow-x: auto;
+  }
+}
