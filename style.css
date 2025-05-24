@@ -96,44 +96,22 @@ footer a:hover {
 
 /* Media Query para móviles */
 @media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    background-position: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero a.btn {
-    width: 90%;
-    max-width: 300px;
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
   body {
-    min-width: 1024px;
-    overflow-x: auto;
+    padding: 1rem;
+    font-size: 16px;
   }
-}
 
-@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .hero {
+    height: auto;
+    padding: 2rem 1rem;
     align-items: center;
-    padding: 2rem;
     text-align: center;
-    background-position: center center;
-    background-size: cover;
   }
 
   .hero h1 {
@@ -146,8 +124,12 @@ footer a:hover {
   }
 
   .hero a.btn {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    margin: 0.5rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
+
