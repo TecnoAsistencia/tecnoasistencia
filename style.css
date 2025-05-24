@@ -249,3 +249,28 @@ footer a:hover {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero a.btn {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
