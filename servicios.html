@@ -14,55 +14,53 @@
       padding: 0;
     }
 
-    /* ======= HEADER Y MENÚ (copiado de index.html) ======= */
     header {
-      background-color: #000;
+      background-color: transparent;
       padding: 1rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 2px solid #00b4d8;
-      box-shadow: 0 0 15px #00b4d8;
+      text-align: center;
     }
 
     header h1 {
       color: #00b4d8;
       font-size: 3rem;
       margin: 0.5rem 0;
-      text-shadow: 0 0 10px #00b4d8;
+      text-shadow: 0 0 10px #002244;
     }
 
     nav {
+      margin-top: 1rem;
       display: flex;
+      gap: 1.5rem;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 0.5rem;
     }
 
     nav a {
-      color: #fff;
+      color: #00b4d8;
       text-decoration: none;
       font-size: 1.1rem;
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-      border-radius: 5px;
-    }
-
-    nav a:hover {
-      background-color: #00b4d8;
-      color: #000;
-      box-shadow: 0 0 10px #00b4d8;
-    }
-
-    nav a[href="servicios.html"] {
-      background-color: #00b4d8;
-      color: #000;
       font-weight: bold;
-      box-shadow: 0 0 10px #00b4d8;
+      position: relative;
     }
 
-    /* ======= CONTENIDO DE SERVICIOS ======= */
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #00b4d8;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
     .contenido {
       text-align: center;
       padding: 2rem;
@@ -72,6 +70,7 @@
       font-size: 2.5rem;
       margin-bottom: 2rem;
       color: #90e0ef;
+      text-shadow: 0 0 8px #001f33;
     }
 
     .botones-servicios {
@@ -124,7 +123,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ======= FOOTER ======= */
     footer {
       background-color: #111;
       text-align: center;
@@ -190,25 +188,21 @@
 <footer>
   <p>© 2025 TecnoAsistencia | contacto@tecnoasistencia.com.py | +595 123 456 789</p>
   <p>
-    <a href="https://www.facebook.com/Davidverdun777" target="_blank">Facebook</a> |
-    <a href="https://www.instagram.com/davidverdun7/?hl=es-la" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/Davidverdun777" target="_blank" rel="noopener noreferrer">Facebook</a> |
+    <a href="https://www.instagram.com/davidverdun7/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram</a>
   </p>
 </footer>
 
 <script>
   function mostrarServicios(tipo) {
-    // Ocultar ambos bloques
     document.getElementById('pc').classList.remove('visible');
     document.getElementById('notebook').classList.remove('visible');
 
-    // Mostrar el bloque correspondiente
     document.getElementById(tipo).classList.add('visible');
 
-    // Desactivar todos los botones
     const botones = document.querySelectorAll('.botones-servicios button');
     botones.forEach(btn => btn.classList.remove('active'));
 
-    // Activar botón clicado
     const botonActivo = Array.from(botones).find(btn => btn.textContent.toLowerCase() === tipo);
     if (botonActivo) {
       botonActivo.classList.add('active');
@@ -218,5 +212,3 @@
 
 </body>
 </html>
-
-
