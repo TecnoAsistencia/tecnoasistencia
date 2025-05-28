@@ -1,146 +1,61 @@
-<!DOCTYPE html>
+index <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Servicios Técnicos - TecnoAsistencia</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+<title>Inicio - TecnoAsistencia</title>
+<style>
+  /* Estilos para el hero banner en portada */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 4rem;
+    color: #00b4d8;
+    text-shadow: 0 0 10px #002244;
+  }
 
-    header {
-      background-color: transparent;
-      padding: 1rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
 
-    header h1 {
-      color: #00b4d8;
-      font-size: 3rem;
-      margin: 0.5rem 0;
-      text-shadow: 0 0 10px #002244;
-    }
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #caf0f8;
+  }
 
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  .hero a.btn {
+    padding: 1rem 2rem;
+    background: #0077b6;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0077b6;
+    transition: background 0.3s ease;
+  }
 
-    nav a {
-      color: #00b4d8;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      position: relative;
-    }
+  .hero a.btn:hover {
+    background: #0096c7;
+    box-shadow: 0 0 15px #0096c7;
+  }
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #00b4d8;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .contenido {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .contenido h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #90e0ef;
-      text-shadow: 0 0 8px #001f33;
-    }
-
-    .botones-servicios {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .botones-servicios button {
-      padding: 1rem 2rem;
-      background: #0077b6;
-      color: white;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 0 10px #0077b6;
-      transition: all 0.3s ease;
-    }
-
-    .botones-servicios button:hover {
-      background: #0096c7;
-      box-shadow: 0 0 15px #0096c7;
-      transform: scale(1.05);
-    }
-
-    .botones-servicios button.active {
-      background-color: #00b4d8;
-      box-shadow: 0 0 15px #00b4d8;
-      transform: scale(1.05);
-    }
-
-    .servicios {
-      display: none;
-      margin-top: 2rem;
-      font-size: 1.4rem;
-      color: #caf0f8;
-      line-height: 1.6;
-    }
-
-    .servicios.visible {
-      display: block;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    footer a {
-      color: #00b4d8;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  /* Nuevo: grupo de botones en línea con espacio */
+  .hero .btn-group {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
 </head>
 <body>
 
@@ -156,33 +71,12 @@
   </nav>
 </header>
 
-
-<section class="contenido">
-  <h2>Servicios Técnicos</h2>
-
-  <div class="botones-servicios">
-    <button onclick="mostrarServicios('pc')">PC</button>
-    <button onclick="mostrarServicios('notebook')">Notebook</button>
-  </div>
-
-  <div id="pc" class="servicios">
-    <ul>
-      <li>Formateo e instalación de Windows</li>
-      <li>Limpieza interna y externa</li>
-      <li>Optimización de rendimiento</li>
-      <li>Instalación de programas y antivirus</li>
-      <li>Respaldo y recuperación de archivos</li>
-    </ul>
-  </div>
-
-  <div id="notebook" class="servicios">
-    <ul>
-      <li>Reemplazo de teclado o pantalla</li>
-      <li>Limpieza y mantenimiento preventivo</li>
-      <li>Mejora de rendimiento y actualización de hardware</li>
-      <li>Instalación de drivers y software</li>
-      <li>Revisión de cargador y batería</li>
-    </ul>
+<section class="hero">
+  <h1>Soluciones Integrales para tu Tecnología</h1>
+  <p>Reparaciones, soporte técnico y venta de productos electrónicos con calidad y confianza.</p>
+  <div class="btn-group">
+    <a href="servicios.html" class="btn">Ver Servicios</a>
+    <a href="ventas.html" class="btn">Ver Productos</a>
   </div>
 </section>
 
@@ -193,23 +87,6 @@
     <a href="https://www.instagram.com/davidverdun7/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram</a>
   </p>
 </footer>
-
-<script>
-  function mostrarServicios(tipo) {
-    document.getElementById('pc').classList.remove('visible');
-    document.getElementById('notebook').classList.remove('visible');
-
-    document.getElementById(tipo).classList.add('visible');
-
-    const botones = document.querySelectorAll('.botones-servicios button');
-    botones.forEach(btn => btn.classList.remove('active'));
-
-    const botonActivo = Array.from(botones).find(btn => btn.textContent.toLowerCase() === tipo);
-    if (botonActivo) {
-      botonActivo.classList.add('active');
-    }
-  }
-</script>
 
 </body>
 </html>
