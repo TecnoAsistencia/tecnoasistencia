@@ -174,25 +174,45 @@
   <div class="botones-servicios">
     <button onclick="mostrarServicios('pc')">PC</button>
     <button onclick="mostrarServicios('notebook')">Notebook</button>
+    <button onclick="mostrarServicios('celular')">celular</button>
   </div>
 
   <div id="pc" class="servicios">
     <ul>
-      <li>Formateo e instalación de Windows</li>
+      <li>Formateo e instalación de windows</li>
       <li>Limpieza interna y externa</li>
-      <li>Optimización de rendimiento</li>
-      <li>Instalación de programas y antivirus</li>
-      <li>Respaldo y recuperación de archivos</li>
+      <li>Flasheo y Desbloqueo</li>
+      <li>Activación de windows y office</li>
+      <li>Optimización de rendimiento (sistemas operativos, aplicaciones, juegos)</li>
+      <li>Instalación y Configuración de juegos</li>
+      <li>Instalación y configuración de sistemas operativos</li>
+      <li>Instalación y configuración de aplicaciones</li>
+      <li>Instalación y configuración de antivirus</li>
+      <li>Instalación de drivers</li>
+      <in>Instalación de emuladores</in>
     </ul>
   </div>
 
   <div id="notebook" class="servicios">
     <ul>
-      <li>Reemplazo de teclado o pantalla</li>
-      <li>Limpieza y mantenimiento preventivo</li>
-      <li>Mejora de rendimiento y actualización de hardware</li>
-      <li>Instalación de drivers y software</li>
-      <li>Revisión de cargador y batería</li>
+      <li>Instalación y configuración de aplicaciones</li>
+      <li>Instalación y configuración de antivirus</li>
+      <li>Instalación y configuración de sistemas operativos</li>
+      <li>Instalación y Configuración de juegos</li>
+      <in>Instalación de emuladores</in>
+      <li>Instalación de drivers</li>
+      <li>Optimización de rendimiento (sistemas operativos, aplicaciones, juegos)</li>
+      <li>Activación de windows y office</li>
+      <li>Flasheo y Desbloqueo</li>
+      <li>Limpieza interna y externa</li>
+      <li>Formateo e instalación de windows</li>
+    </ul>
+  </div>
+
+  <div id="celular" class="servicios">
+    <ul>
+      <li>Flasheo y Desbloqueo</li>
+      <li>Limpieza de virus</li>
     </ul>
   </div>
 </section>
@@ -209,6 +229,7 @@
   function mostrarServicios(tipo) {
     document.getElementById('pc').classList.remove('visible');
     document.getElementById('notebook').classList.remove('visible');
+    document.getElementById('celular').classList.remove('visible');
 
     document.getElementById(tipo).classList.add('visible');
 
