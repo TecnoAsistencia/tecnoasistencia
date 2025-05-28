@@ -175,6 +175,7 @@
     <button onclick="mostrarServicios('pc')">PC</button>
     <button onclick="mostrarServicios('notebook')">Notebook</button>
     <button onclick="mostrarServicios('celular')">Celular</button>
+    <button onclick="mostrarServicios('otros')">Otros</button>
   </div>
 
   <div id="pc" class="servicios">
@@ -215,6 +216,14 @@
       <li>Limpieza de virus</li>
     </ul>
   </div>
+
+  <div id="otros" class="servicios">
+    <ul>
+      <li>PS2-Flasheo, Desbloqueo e Instalación de juegos</li>
+      <li>PS3-Flasheo, Desbloqueo e Instalación de juegos</li>
+      <li>PS4(algunos)-Flasheo, Desbloqueo e Instalación de juegos</li>
+    </ul>
+  </div>
 </section>
 
 <footer>
@@ -230,6 +239,7 @@
     document.getElementById('pc').classList.remove('visible');
     document.getElementById('notebook').classList.remove('visible');
     document.getElementById('celular').classList.remove('visible');
+    document.getElementById('otros').classList.remove('visible');
 
     document.getElementById(tipo).classList.add('visible');
 
