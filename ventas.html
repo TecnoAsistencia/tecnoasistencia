@@ -7,7 +7,38 @@
 <title>Ventas Informáticas - TecnoAsistencia</title>
 </head>
 <body>
+ <style>
+   nav {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+    nav a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #00b4d8;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+  </style>
 <nav>
   <a href="index.html">Bienvenida</a>
   <a href="servicios.html">Servicios Técnicos</a>
