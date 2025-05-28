@@ -61,14 +61,20 @@
 
 <header>
   <h1>TecnoAsistencia</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios Técnicos</a>
-    <a href="ventas.html">Ventas Informáticas</a>
-    <a href="faq.html">Preguntas Frecuentes</a>
-    <a href="testimonios.html">Testimonios</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
+ nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #00b4d8;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
 </header>
 
 <section class="hero">
