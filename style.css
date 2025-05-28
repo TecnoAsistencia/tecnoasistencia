@@ -267,3 +267,17 @@ footer a:hover {
   background: #0096c7;
   box-shadow: 0 0 15px #0096c7;
 }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00b4d8;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
