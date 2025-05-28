@@ -7,21 +7,36 @@
 <title>Inicio - TecnoAsistencia</title>
 <style>
   /* Estilos para el hero banner en portada */
+  nav {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-  nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #00b4d8;
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
-}
 
-  nav a:hover::after {
-    width: 100%;
-}
+    nav a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #00b4d8;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
   .hero {
     position: relative;
     height: 80vh;
