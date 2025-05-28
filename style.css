@@ -6,11 +6,15 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #121212; /* fondo oscuro elegante */
+  background-color: #000;
+  background-image: url('fondo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #eee;
-  line-height: 1.6;
 }
+
 
 /* Animación flotante */
 @keyframes float {
