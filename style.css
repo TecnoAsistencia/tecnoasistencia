@@ -46,49 +46,47 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Estilos menú navegación */
-header {
-  background-color: #000; /* fondo negro */
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 header h1 {
-  color: #00b4d8;
-  font-weight: 900;
-  font-size: 2rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 8px #00bfff,
+    0 0 15px #00bfff,
+    0 0 20px #00bfff,
+    0 0 25px #0077b6;
 }
 
-header nav a {
-  position: relative;
+header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.85;
+  text-shadow: 0 0 6px #00bfff;
+}
+
+nav {
+  background: #002244;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #66ccff;
   text-decoration: none;
-  color: #00b4d8;
   font-weight: 600;
   font-size: 1.1rem;
-  margin-left: 2rem;
-  padding-bottom: 4px;
-  transition: color 0.3s ease;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-header nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #00b4d8;
-  transition: width 0.3s ease;
-}
-
-header nav a:hover::after {
-  width: 100%;
-}
-
-header nav a:hover {
-  color: #90e0ef;
+nav a:hover,
+nav a:focus {
+  background: #66ccff;
+  color: #002244;
+  outline: none;
 }
 
 section {
