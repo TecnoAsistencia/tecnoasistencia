@@ -57,34 +57,49 @@
   }
 
   /* --- Animación de línea en el menú --- */
-  header nav {
-    display: flex;
-    gap: 2rem;
-  }
+  header {
+  background-color: #000; /* fondo negro */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  header nav a {
-    position: relative;
-    text-decoration: none;
-    color: #00b4d8;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding-bottom: 4px;
-  }
+header h1 {
+  color: #00b4d8;
+  font-weight: 900;
+  font-size: 2rem;
+}
 
-  header nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: #00b4d8;
-    transition: width 0.3s ease;
-  }
+header nav a {
+  position: relative;
+  text-decoration: none;
+  color: #00b4d8;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
 
-  header nav a:hover::after {
-    width: 100%;
-  }
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00b4d8;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+header nav a:hover {
+  color: #90e0ef;
+}
 </style>
 </head>
 <body>
