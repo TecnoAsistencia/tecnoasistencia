@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Ventas Informáticas - TecnoAsistencia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventas - TecnoAsistenciaPY</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icono.png" type="image/png">
   <style>
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-    nav a {
-      color: #00b4d8;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #00b4d8;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .contenido {
-      text-align: center;
-      padding: 4rem 2rem;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      background-image: url('fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Montserrat', sans-serif;
       color: #caf0f8;
-    }
-
-    .contenido h1 {
-      font-size: 4rem;
-      color: #00b4d8;
-      text-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff;
-      margin-bottom: 3rem;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .contenido p {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      animation: fadeInText 2s ease-in-out;
-    }
-
-    .barra-carga {
-      width: 80%;
-      max-width: 600px;
-      height: 30px;
-      background-color: #1e1e1e;
-      border-radius: 15px;
-      margin: 0 auto;
-      overflow: hidden;
-      box-shadow: 0 0 10px #00b4d8;
-    }
-
-    .progreso {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #00b4d8, #0077b6);
-      animation: llenarBarra 3s ease-in-out forwards;
     }
 
     @keyframes llenarBarra {
@@ -85,63 +31,57 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-        text-shadow:
-          0 0 6px #003366,
-          0 0 12px #003366,
-          0 0 18px #005580,
-          0 0 24px #0077b6,
-          0 0 30px #0099cc,
-          0 0 36px #00bfff;
-      }
-      50% {
-        transform: translateY(-8px);
-        text-shadow:
-          0 0 10px #003366,
-          0 0 18px #003366,
-          0 0 28px #005580,
-          0 0 38px #0077b6,
-          0 0 48px #0099cc,
-          0 0 58px #00bfff;
-      }
+    .contenido {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .contenido h1 {
+      font-size: 6rem;
+      font-weight: 900;
+      color: #00bfff;
+      animation: fadeInText 2s ease forwards;
+      text-shadow:
+        0 0 15px #00bfff,
+        0 0 30px #0077b6,
+        0 0 45px #0099cc,
+        0 0 60px #00bfff;
+      margin-bottom: 3rem;
+    }
+
+    .barra-carga {
+      width: 60%;
+      max-width: 600px;
+      height: 16px;
+      background-color: #003366;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #00bfff;
+      position: relative;
+    }
+
+    .barra-carga .progreso {
+      height: 100%;
+      background: linear-gradient(90deg, #00bfff, #0099cc);
+      animation: llenarBarra 2.5s ease-in-out infinite;
+      box-shadow: 0 0 10px #00bfff;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios Técnicos</a>
-    <a href="ventas.html">Ventas Informáticas</a>
-    <a href="faq.html">Preguntas Frecuentes</a>
-    <a href="testimonios.html">Testimonios</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-
-  <section class="contenido" id="contenidoVentas"></section>
-
-  <script>
-    const desdeBoton = localStorage.getItem('mostrarAnimacionProductos');
-    const contenedor = document.getElementById('contenidoVentas');
-
-    if (desdeBoton === 'true') {
-      contenedor.innerHTML = `
-        <h1>Próximamente</h1>
-        <p>Cargando...</p>
-        <div class="barra-carga">
-          <div class="progreso"></div>
-        </div>
-      `;
-      localStorage.removeItem('mostrarAnimacionProductos');
-    } else {
-      contenedor.innerHTML = `
-        <h1>Catálogo</h1>
-        <p>Accedé desde el botón en la portada para ver novedades.</p>
-      `;
-    }
-  </script>
+  <div class="contenido">
+    <h1>Próximamente</h1>
+    <div class="barra-carga">
+      <div class="progreso"></div>
+    </div>
+  </div>
 
 </body>
 </html>
