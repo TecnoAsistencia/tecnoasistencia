@@ -1,3 +1,10 @@
+¡Con gusto, David! Acá tenés el archivo **`style.css` completo**, con todos tus estilos originales más la modificación final para que la palabra **“Próximamente”** tenga su **mini fondo gris oscuro**, y la **barra de carga** esté animada y centrada. Está listo para copiar y pegar directamente ⚡🖤
+
+---
+
+## ✅ `style.css` COMPLETO CON MODIFICACIÓN FINAL
+
+```css
 /* Fuentes y reset básico */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
 
@@ -316,4 +323,4 @@ footer a:hover {
 .contenido {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify
