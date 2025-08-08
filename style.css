@@ -1,8 +1,10 @@
- /* Fuentes y reset básico */
+/* Fuentes y reset básico */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
 
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,7 +16,6 @@ body {
   background-attachment: fixed;
   color: #eee;
 }
-
 
 /* Animación flotante */
 @keyframes float {
@@ -84,6 +85,18 @@ nav a {
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00b4d8;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
 }
 
 nav a:hover,
@@ -91,6 +104,10 @@ nav a:focus {
   background: #66ccff;
   color: #002244;
   outline: none;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 section {
@@ -216,12 +233,15 @@ footer a:hover {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 768px) {
   body {
     min-width: 1024px;
     overflow-x: auto;
   }
 }
+
+/* Hero Banner */
 .hero {
   position: relative;
   height: 80vh;
@@ -271,17 +291,30 @@ footer a:hover {
   background: #0096c7;
   box-shadow: 0 0 15px #0096c7;
 }
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #00b4d8;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
+
+/* ===================== */
+/* Estilos para Ventas.html */
+/* ===================== */
+
+.contenido {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #caf0f8;
 }
 
-nav a:hover::after {
-  width: 100%;
+.contenido h1 {
+  font-size: 4rem;
+  color: #00b4d8;
+  text-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff;
+  margin-bottom: 3rem;
+  animation: float 3s ease-in-out infinite;
 }
+
+.contenido p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInText 2s ease-in-out;
+}
+
+.barra-carga {
+  width: 80
