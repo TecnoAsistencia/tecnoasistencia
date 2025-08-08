@@ -18,7 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Animación flotante */
+/* Animaciones */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -314,10 +314,6 @@ footer a:hover {
 /* ===================== */
 
 .contenido {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: #caf0f8;
-}
-
-.contenido h1 {
-  font-size: 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
